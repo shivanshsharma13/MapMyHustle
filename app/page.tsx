@@ -122,7 +122,7 @@ export default function Page() {
 
             <div className="card overflow-hidden">
               {/* Pass stats for footer in export */}
-              <MapClient activities={activities} hexResolution={hexRes} stats={stats} />
+              <MapClient activities={activities} hexResolution={hexRes}/>
             </div>
 
             <div className="card p-4">

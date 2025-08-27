@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import type { LatLngBoundsExpression } from "leaflet";
-import polyline from "@mapbox/polyline";
+import * as polyline from "@mapbox/polyline";
 import * as h3 from "h3-js";
 import * as htmlToImage from "html-to-image";
 
