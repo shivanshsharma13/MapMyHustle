@@ -1,3 +1,4 @@
+export const runtime = "nodejs";
 import { NextResponse } from "next/server";
 import * as h3 from "h3-js";
 import polyline from "@mapbox/polyline";

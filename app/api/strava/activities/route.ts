@@ -1,3 +1,4 @@
+export const runtime = "nodejs";
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { STRAVA_API_BASE, refreshAccessToken, type TokenBundle } from "@/lib/strava";

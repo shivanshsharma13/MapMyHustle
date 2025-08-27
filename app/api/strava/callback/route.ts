@@ -1,3 +1,4 @@
+export const runtime = "nodejs";
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { exchangeCodeForToken, getBaseUrl } from "@/lib/strava";

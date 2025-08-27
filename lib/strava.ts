@@ -3,8 +3,14 @@ export const STRAVA_TOKEN_URL = "https://www.strava.com/oauth/token";
 export const STRAVA_API_BASE = "https://www.strava.com/api/v3";
 
 export function getBaseUrl(): string {
-  return process.env.BASE_URL || "http://localhost:3000";
+  // Prefer explicit BASE_URL (set for production)
+  if (process.env.BASE_URL) return process.env.BASE_URL;
+  // On Vercel previews/branches, this is auto-set like "project-abc.vercel.app"
+  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+  // Local dev fallback
+  return "http://localhost:3000";
 }
+
 
 export function getScopes(): string {
   // read-like scopes are enough to fetch activities
