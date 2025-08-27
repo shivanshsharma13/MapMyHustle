@@ -175,7 +175,7 @@ export default function MapClient({
           <RL.MapContainer
             key={mapKey}
             className="w-full h-full"
-            bounds={bounds as any}
+            bounds={bounds as any}   
             scrollWheelZoom
           >
             <RL.TileLayer
@@ -188,7 +188,7 @@ export default function MapClient({
             {hexPolygons.map((poly, i) => (
               <RL.Polygon
                 key={`hx-${i}`}
-                positions={poly}
+                positions={poly as any} 
                 pathOptions={{
                   weight: 1,
                   fillOpacity: 0.18,
@@ -203,7 +203,7 @@ export default function MapClient({
             {runLines.map((pts, i) => (
               <RL.Polyline
                 key={`run-${i}`}
-                positions={pts}
+                positions={pts as any} 
                 weight={3}
                 opacity={0.9}
                 pathOptions={{ color: "#22c55e" }}
@@ -214,7 +214,7 @@ export default function MapClient({
             {rideLines.map((pts, i) => (
               <RL.Polyline
                 key={`ride-${i}`}
-                positions={pts}
+                positions={pts as any}  
                 weight={3}
                 opacity={0.9}
                 pathOptions={{ color: "#3b82f6" }}
